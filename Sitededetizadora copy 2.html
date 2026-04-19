@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiInsetos | Dedetização Profissional</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+         :root {
+            --brand-blue: #2c2b5d;
+            /* O azul exato da sua logo */
+            --brand-red: #b92c2c;
+            /* O vermelho da logo */
+            --light-bg: #f4f4f9;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Header / Logo Area */
+        
+        header {
+            background-color: var(--brand-blue);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--brand-red);
+        }
+        
+        .logo-img {
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+        }
+        /* Navigation */
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background: #1a1a3a;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--brand-red);
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(44, 43, 93, 0.85), rgba(44, 43, 93, 0.85)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80') center/cover;
+            color: var(--white);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        /* Botão estilizado com as cores da logo */
+        
+        .btn-whats {
+            background-color: var(--brand-red);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s transform;
+            box-shadow: 0 4px 15px rgba(185, 44, 44, 0.3);
+        }
+        
+        .btn-whats:hover {
+            transform: scale(1.05);
+            background-color: #a02525;
+        }
+        /* Serviços */
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--brand-blue);
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-bottom: 4px solid var(--brand-blue);
+            transition: 0.3s;
+        }
+        
+        .service-card:hover {
+            border-bottom-color: var(--brand-red);
+            transform: translateY(-5px);
+        }
+        
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--brand-blue);
+            margin-bottom: 15px;
+        }
+        /* Orçamento */
+        
+        .quote-section {
+            background-color: var(--brand-blue);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        input,
+        textarea {
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-family: inherit;
+        }
+        
+        .btn-submit {
+            background-color: var(--brand-red);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        /* Footer */
+        
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+        /* WhatsApp Flutuante */
+        
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="image_ff4a61.png" alt="AntiInsetos Logo" class="logo-img">
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Orçamento</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Lugar de praga é longe de casa</h1>
+        <p>Atendimento especializado em Teresina e região.</p>
+        <a href="https://wa.me/5586988885555" class="btn-whats" target="_blank">
+            <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO AGORA
+        </a>
+    </section>
+
+    <section class="container" id="servicos">
+        <h2 class="section-title">Nossas Soluções</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h3>Insetos Rasteiros</h3>
+                <p>Controle eficaz de baratas, formigas e escorpiões com segurança total.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Descupinização</h3>
+                <p>Proteção contra cupins de solo e de madeira para móveis e estruturas.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mouse"></i>
+                <h3>Desratização</h3>
+                <p>Eliminação e monitoramento de roedores em residências e empresas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section" id="contato">
+        <h2 style="color: white;">Peça seu orçamento sem compromisso</h2>
+        <form onsubmit="enviarWhats(event)">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="text" id="servico" placeholder="Qual o problema? (ex: Baratas)" required>
+            <textarea id="mensagem" rows="3" placeholder="Detalhes (Opcional)"></textarea>
+            <button type="submit" class="btn-submit">Enviar para o Consultor</button>
+        </form>
+    </section>
+
+    <div class="container" style="text-align: center; padding-top: 0;">
+        <p><i class="fas fa-phone-alt" style="color: var(--brand-red);"></i> (86) 98888-5555</p>
+        <p><i class="fas fa-envelope" style="color: var(--brand-red);"></i> contato@antiinsetos.com</p>
+    </div>
+
+    <footer>
+        <p>© 2026 AntiInsetos Dedetizadora. Teresina - PI.</p>
+    </footer>
+
+    <a href="https://wa.me/5586988885555" class="whatsapp-fixed" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const servico = document.getElementById('servico').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const texto = `Olá! Vi o site e gostaria de um orçamento:\n\n*Nome:* ${nome}\n*Problema:* ${servico}\n*Detalhes:* ${mensagem}`;
+            const url = `https://wa.me/5586988885555?text=${encodeURIComponent(texto)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
